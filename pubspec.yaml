@@ -1,0 +1,10 @@
+name: kelicap_templates
+environment:
+  sdk: ">=3.13.3 <4.0.0"
+dev_dependencies:
+  melos: ^8.6.0
+
+workspace:
+  - examples/hello_world
+
+melos: 

@@ -1,0 +1,19 @@
+import 'package:kelicap_test/kelicap_test.dart';
+import 'package:test/test.dart';
+import 'package:starter_app/app_component.dart';
+import 'package:starter_app/app_component.template.dart' as ng;
+
+void main() {
+  final testBed = NgTestBed<AppComponent>(ng.AppComponentNgFactory);
+  late NgTestFixture<AppComponent> fixture;
+
+  setUp(() async {
+    fixture = await testBed.create();
+  });
+
+  tearDown(disposeAnyRunningTest);
+
+  test('heading', () {
+    expect(fixture.text, contains('My First Kelicap App'));
+  });
+}
